@@ -423,9 +423,9 @@ class BasicAgentAA(BustersAgent): #############################INTERESA#########
         print(new_info)'''
         import numpy as np
         relation = "\n@relation all-data-pacman"
-        atribute1 = "\n@attribute pacmanXpos NUMERIC"
-        atribute2 = "\n@attribute pacmanYpos NUMERIC"
-        atribute3 = "\n@attribute pacmanDirec {West, East, North, South}"
+        atribute2 = "\n@attribute pacmanXpos NUMERIC"
+        atribute3 = "\n@attribute pacmanYpos NUMERIC"
+        atribute1 = "\n@attribute pacmanDirec {West, East, North, South}"
         atribute4 = "\n@attribute LivingGhost1 {False, True}"
         atribute5 = "\n@attribute LivingGhost2 {False, True}"
         atribute6 = "\n@attribute LivingGhost3 {False, True}"
@@ -457,7 +457,7 @@ class BasicAgentAA(BustersAgent): #############################INTERESA#########
         pacmanYPosition = gameState.getPacmanPosition()[1]
         pacmanDirection = gameState.data.agentStates[0].getDirection()
         livingGhosts = gameState.getLivingGhosts()[1:]
-        new_info = [pacmanXPosition, pacmanYPosition, pacmanDirection]+livingGhosts
+        new_info = [pacmanDirection, pacmanXPosition, pacmanYPosition]+livingGhosts
         ghostPositions = gameState.getGhostPositions()
         ghostDistances = gameState.data.ghostDistances[:] #Copy the list, there'll be changes, so change the assigment
         
@@ -482,9 +482,9 @@ class BasicAgentAA(BustersAgent): #############################INTERESA#########
     def printFilterData1(self, gameState):
         import numpy as np
         relation = "\n@relation all-data-pacman"
-        atribute1 = "\n@attribute pacmanXpos NUMERIC"
-        atribute2 = "\n@attribute pacmanYpos NUMERIC"
-        atribute3 = "\n@attribute pacmanDirec {West, East, North, South}"
+        atribute2 = "\n@attribute pacmanXpos NUMERIC"
+        atribute3 = "\n@attribute pacmanYpos NUMERIC"
+        atribute1 = "\n@attribute pacmanDirec {West, East, North, South}"
         atribute4 = "\n@attribute ghost1XPos NUMERIC"
         atribute5 = "\n@attribute ghost1YPos NUMERIC"
         atribute6 = "\n@attribute ghost2XPos NUMERIC"
@@ -507,7 +507,7 @@ class BasicAgentAA(BustersAgent): #############################INTERESA#########
         pacmanXPosition = gameState.getPacmanPosition()[0]
         pacmanYPosition = gameState.getPacmanPosition()[1]
         pacmanDirection = gameState.data.agentStates[0].getDirection()
-        new_info = [pacmanXPosition, pacmanYPosition, pacmanDirection]
+        new_info = [pacmanDirection, pacmanXPosition, pacmanYPosition]
         ghostPositions = gameState.getGhostPositions()
 
         takenAction = BustersAgent.getAction(self, gameState)
