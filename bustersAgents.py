@@ -425,7 +425,7 @@ class BasicAgentAA(BustersAgent): #############################INTERESA#########
         relation = "\n@relation all-data-pacman"
         atribute2 = "\n@attribute pacmanXpos NUMERIC"
         atribute3 = "\n@attribute pacmanYpos NUMERIC"
-        atribute1 = "\n@attribute pacmanDirec {West, East, North, South}"
+        atribute1 = "\n@attribute pacmanDirec {West, East, North, South, Stop}"
         atribute4 = "\n@attribute LivingGhost1 {False, True}"
         atribute5 = "\n@attribute LivingGhost2 {False, True}"
         atribute6 = "\n@attribute LivingGhost3 {False, True}"
@@ -443,7 +443,7 @@ class BasicAgentAA(BustersAgent): #############################INTERESA#########
         atribute19 = "\n@attribute ghost3Dist NUMERIC"
         atribute20 = "\n@attribute ghost4Dist NUMERIC"
         clase = "\n@attribute action {West, East, North, South}"
-        instance = [relation, atribute1, atribute2, atribute3, atribute4, atribute5, atribute6, atribute7, atribute9, atribute10, atribute11, atribute12, atribute13, atribute14, atribute15, atribute16, atribute17, atribute18, atribute19, atribute20, clase, ""]
+        instance = [relation, atribute1, atribute2, atribute3, atribute4, atribute5, atribute6, atribute7, atribute9, atribute10, atribute11, atribute12, atribute13, atribute14, atribute15, atribute16, atribute17, atribute18, atribute19, atribute20, clase]
 
         if not os.path.isfile("weka-pacman/all-data-pacman.arff"):
             with open('weka-pacman/all-data-pacman.arff', 'w') as file:
@@ -481,10 +481,10 @@ class BasicAgentAA(BustersAgent): #############################INTERESA#########
 
     def printFilterData1(self, gameState):
         import numpy as np
-        relation = "\n@relation all-data-pacman"
+        relation = "\n@relation filter-data-pacman-manual1"
         atribute2 = "\n@attribute pacmanXpos NUMERIC"
         atribute3 = "\n@attribute pacmanYpos NUMERIC"
-        atribute1 = "\n@attribute pacmanDirec {West, East, North, South}"
+        atribute1 = "\n@attribute pacmanDirec {West, East, North, South, Stop}"
         atribute4 = "\n@attribute ghost1XPos NUMERIC"
         atribute5 = "\n@attribute ghost1YPos NUMERIC"
         atribute6 = "\n@attribute ghost2XPos NUMERIC"
@@ -494,7 +494,7 @@ class BasicAgentAA(BustersAgent): #############################INTERESA#########
         atribute10 = "\n@attribute ghost4XPos NUMERIC"
         atribute11 = "\n@attribute ghost4YPos NUMERIC"
         clase = "\n@attribute action {West, East, North, South}"
-        instance = [relation, atribute1, atribute2, atribute3, atribute4, atribute5, atribute6, atribute7, atribute8, atribute9, atribute10, atribute11, clase, ""]
+        instance = [relation, atribute1, atribute2, atribute3, atribute4, atribute5, atribute6, atribute7, atribute8, atribute9, atribute10, atribute11, clase]
 
         if not os.path.isfile("weka-pacman/filter-data-pacman-manual1.arff"):
             with open('weka-pacman/filter-data-pacman-manual1.arff', 'w') as file:
@@ -526,7 +526,7 @@ class BasicAgentAA(BustersAgent): #############################INTERESA#########
 
     def printFilterData2(self, gameState):
         import numpy as np
-        relation = "\n@relation all-data-pacman"
+        relation = "\n@relation filter-data-pacman-manual2"
         atribute1 = "\n@attribute LivingGhost1 {False, True}"
         atribute2 = "\n@attribute LivingGhost2 {False, True}"
         atribute3 = "\n@attribute LivingGhost3 {False, True}"
@@ -536,7 +536,7 @@ class BasicAgentAA(BustersAgent): #############################INTERESA#########
         atribute7 = "\n@attribute ghost3Dist NUMERIC"
         atribute8 = "\n@attribute ghost4Dist NUMERIC"
         clase = "\n@attribute action {West, East, North, South}"
-        instance = [relation, atribute1, atribute2, atribute3, atribute4, atribute5, atribute6, atribute7, atribute8, clase, ""]
+        instance = [relation, atribute1, atribute2, atribute3, atribute4, atribute5, atribute6, atribute7, atribute8, clase]
 
         if not os.path.isfile("weka-pacman/filter-data-pacman-manual2.arff"):
             with open('weka-pacman/filter-data-pacman-manual2.arff', 'w') as file:
