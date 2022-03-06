@@ -398,29 +398,6 @@ class BasicAgentAA(BustersAgent): #############################INTERESA#########
 
 
     def printLineData(self, gameState):
-        '''import numpy as np
-        new_line = []
-        pacmanXPosition = gameState.getPacmanPosition()[0]
-        pacmanYPosition = gameState.getPacmanPosition()[1]
-        pacmanDirection = gameState.data.agentStates[0].getDirection()
-        livingGhosts = gameState.getLivingGhosts()
-        new_info = [pacmanXPosition, pacmanYPosition, pacmanDirection]+livingGhosts
-        ghostPositions = gameState.getGhostPositions()
-        ghostDistances = gameState.data.ghostDistances
-
-        for x in ghostPositions:
-            for i in x:
-                new_info.append(i)  
-        
-        new_info = new_info+ghostDistances
-        new_line.append(new_info)
-
-        with open('LineData.csv', 'a') as file:
-            np.savetxt(file, new_line, delimiter=',', fmt='%s')
-        with open('LineData.txt', 'a') as file2: 
-            np.savetxt(file2, new_line, delimiter=',', fmt='%s')
-        
-        print(new_info)'''
         import numpy as np
         relation = "\n@relation all-data-pacman"
         atribute2 = "\n@attribute pacmanXpos NUMERIC"

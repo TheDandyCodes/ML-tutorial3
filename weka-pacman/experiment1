@@ -1,0 +1,29 @@
+Tester:     weka.experiment.PairedCorrectedTTester -G 4,5,6 -D 1 -R 2 -S 0.05 -result-matrix "weka.experiment.ResultMatrixPlainText -mean-prec 2 -stddev-prec 2 -col-name-width 0 -row-name-width 25 -mean-width 0 -stddev-width 0 -sig-width 0 -count-width 5 -print-col-names -print-row-names -enum-col-names"
+Analysing:  Percent_correct
+Datasets:   3
+Resultsets: 9
+Confidence: 0.05 (two tailed)
+Sorted by:  -
+Date:       5/3/22 14:16
+
+
+Dataset                   (1) trees.J4 | (2) lazy. (3) lazy. (4) lazy. (5) lazy. (6) lazy. (7) rules (8) rules (9) bayes
+------------------------------------------------------------------------------------------------------------------------
+all-data-pacman          (100)   68.08 |   63.94     64.46 *   65.52     64.76     64.60     67.51     32.44 *   57.86 *
+filter-data-pacman-manual(100)   63.63 |   49.86 *   51.98 *   52.02 *   52.49 *   53.61 *   63.62     29.57 *   50.69 *
+filter-data-pacman-manual(100)   52.85 |   50.48     52.29     51.46     52.55     52.65     51.63     29.62 *   49.05  
+------------------------------------------------------------------------------------------------------------------------
+                               (v/ /*) |   (0/2/1)   (0/1/2)   (0/2/1)   (0/2/1)   (0/2/1)   (0/3/0)   (0/0/3)   (0/1/2)
+
+
+Key:
+(1) trees.J48 '-C 0.25 -M 2' -217733168393644444
+(2) lazy.IBk '-K 1 -W 0 -A \"weka.core.neighboursearch.LinearNNSearch -A \\\"weka.core.EuclideanDistance -R first-last\\\"\"' -3080186098777067172
+(3) lazy.IBk '-K 3 -W 0 -A \"weka.core.neighboursearch.LinearNNSearch -A \\\"weka.core.EuclideanDistance -R first-last\\\"\"' -3080186098777067172
+(4) lazy.IBk '-K 5 -W 0 -A \"weka.core.neighboursearch.LinearNNSearch -A \\\"weka.core.EuclideanDistance -R first-last\\\"\"' -3080186098777067172
+(5) lazy.IBk '-K 7 -W 0 -A \"weka.core.neighboursearch.LinearNNSearch -A \\\"weka.core.EuclideanDistance -R first-last\\\"\"' -3080186098777067172
+(6) lazy.IBk '-K 9 -W 0 -A \"weka.core.neighboursearch.LinearNNSearch -A \\\"weka.core.EuclideanDistance -R first-last\\\"\"' -3080186098777067172
+(7) rules.PART '-C 0.25 -M 2' 8121455039782598361
+(8) rules.ZeroR '' 48055541465867954
+(9) bayes.NaiveBayes '' 5995231201785697655
+

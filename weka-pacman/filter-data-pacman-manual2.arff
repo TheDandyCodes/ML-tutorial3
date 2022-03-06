@@ -397,7 +397,6 @@ True,True,True,False,10,1,20,0,West
 True,False,True,False,11,0,22,0,South
 True,False,True,False,9,0,20,0,South
 True,False,True,False,7,0,20,0,South
-True,False,True,False,7,0,20,0,Stop
 True,False,True,False,7,0,18,0,East
 True,False,True,False,9,0,16,0,West
 True,False,True,False,7,0,16,0,West
